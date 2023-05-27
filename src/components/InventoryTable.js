@@ -21,7 +21,7 @@ function InventoryTable({ filters, userType, limit }) {
       render: (text) => text.toUpperCase(),
     },
     {
-      title: "Quantity",
+      title: "Quantity (ML)",
       dataIndex: "quantity",
     },
     {
