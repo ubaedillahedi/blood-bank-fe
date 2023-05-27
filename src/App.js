@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import ProtectedPage from "./components/ProtectedPage";
+import Profile from "./pages/Profile";
 function App() {
   return (
     <div>
@@ -13,6 +14,14 @@ function App() {
             element={
               <ProtectedPage>
                 <Home />
+              </ProtectedPage>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedPage>
+                <Profile />
               </ProtectedPage>
             }
           />
