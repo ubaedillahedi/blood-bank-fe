@@ -1,6 +1,6 @@
 import { Button, Table, message } from "antd";
 import React from "react";
-// import InventoryForm from "./InventoryForm";
+import InventoryForm from "./InventoryForm";
 import { useDispatch } from "react-redux";
 import { GetInventory } from "../../../apicalls/inventory";
 import { SetLoading } from "../../../redux/loadersSlice";
@@ -70,9 +70,9 @@ function Inventory() {
         </Button>
       </div>
       <Table columns={column} dataSource={data} className="mt-3" />
-      {/* {open && (
+      {open && (
         <InventoryForm open={open} setOpen={setOpen} reloadData={getData} />
-      )} */}
+      )}
     </div>
   );
 }
