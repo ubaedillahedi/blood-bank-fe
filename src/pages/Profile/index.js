@@ -3,6 +3,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Hospitals from "./Hospitals";
 import Donars from "./Donars";
+import Inventory from "./Inventory";
 
 function Profile() {
   const { currentUser } = useSelector((state) => state.users);
@@ -11,7 +12,9 @@ function Profile() {
       <Tabs>
         {currentUser.userType === "organization" && (
           <>
-            <Tabs.TabPane tab="Inventory" key="1"></Tabs.TabPane>
+            <Tabs.TabPane tab="Inventory" key="1">
+              <Inventory />
+            </Tabs.TabPane>
             <Tabs.TabPane tab="Donars" key="2">
               <Donars />
             </Tabs.TabPane>
